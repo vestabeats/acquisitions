@@ -171,3 +171,18 @@
 {"level":"info","message":"User marv@gmail.com created successfully","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully: marv@gmail.com","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [09/Aug/2026:17:57:54 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 104 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User marv@gmail.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: marv@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [09/Aug/2026:18:21:24 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 116 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User authenticated: marv@gmail.com (user)","service":"acquisitions-api"}
+{"level":"info","message":"Getting user by id: 2","service":"acquisitions-api"}
+{"level":"error","message":"Error getting user by id 2: User not found","service":"acquisitions-api","stack":"Error: User not found\n    at getUserById (file:///C:/Users/DELL/Desktop/Acquisitions/src/services/users.service.js:40:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async fetchUserById (file:///C:/Users/DELL/Desktop/Acquisitions/src/controllers/users.controller.js:46:18)"}
+{"level":"error","message":"Error fetching user by id: User not found","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [09/Aug/2026:18:23:06 +0000] \"GET /api/users/2 HTTP/1.1\" 404 26 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User authenticated: marv@gmail.com (user)","service":"acquisitions-api"}
+{"level":"info","message":"Getting user by id: 1","service":"acquisitions-api"}
+{"level":"info","message":"User marv@gmail.com retrieved successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [09/Aug/2026:18:23:22 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/Aug/2026:20:32:02 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/Aug/2026:20:32:02 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [09/Aug/2026:20:32:02 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
