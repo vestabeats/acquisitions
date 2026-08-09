@@ -2,10 +2,14 @@ import js from '@eslint/js';
 
 export default [
   js.configs.recommended,
+
   {
+    files: ['**/*.js'],
+
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
+
       globals: {
         console: 'readonly',
         process: 'readonly',
@@ -19,12 +23,20 @@ export default [
         clearInterval: 'readonly',
       },
     },
+
     rules: {
       indent: ['error', 2, { SwitchCase: 1 }],
       'linebreak-style': ['error', 'unix'],
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+
+      'no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+        },
+      ],
+
       'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',
@@ -32,12 +44,16 @@ export default [
       'prefer-arrow-callback': 'error',
     },
   },
+
+  // Test files
   {
-    files: ['tests/**/*.js'],
+    files: ['test/**/*.js', 'tests/**/*.js', '**/*.test.js'],
+
     languageOptions: {
       globals: {
         describe: 'readonly',
         it: 'readonly',
+        test: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
@@ -47,6 +63,7 @@ export default [
       },
     },
   },
+
   {
     ignores: ['node_modules/**', 'coverage/**', 'logs/**', 'drizzle/**'],
   },
